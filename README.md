@@ -135,11 +135,11 @@ wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/superviso
 
 **supervisor 启动，停止，自开机命令**<BR/>
 设置开机自启<BR/>
-`systemctl enable systemd-supervisor`
-启动supervisord
-`systemctl start systemd-supervisor`
-查看supervisord运行情况
-`systemctl status systemd-supervisor`
+`systemctl enable systemd-supervisor`<BR/>
+启动supervisord<BR/>
+`systemctl start systemd-supervisor`<BR/>
+查看supervisord运行情况<BR/>
+`systemctl status systemd-supervisor`<BR/>
 
 
 
