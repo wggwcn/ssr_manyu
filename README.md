@@ -58,34 +58,34 @@ AUTOEXEC = 1<BR/>
   `API_INTERFACE = 'glzjinmod' #glzjinmod (数据库方式连接)，modwebapi (http api)<BR/>
   #mudb，不要管<BR/>
 MUDB_FILE = 'mudb.json'<BR/>
-  # HTTP API 的相关信息，看重大更新说明。<BR/>
+>   # HTTP API 的相关信息，看重大更新说明。<BR/>
   WEBAPI_URL = 'https://zhaoj.in'<BR/>
   WEBAPI_TOKEN = 'glzjin'<BR/>
-  # Mysql 数据库连接信息<BR/>
+>   # Mysql 数据库连接信息<BR/>
   MYSQL_HOST = '127.0.0.1'<BR/>
 MYSQL_PORT = 3306<BR/>
 MYSQL_USER = 'ss'<BR/>
 MYSQL_PASS = 'ss'<BR/>
 MYSQL_DB = 'shadowsocks'<BR/>
-  # 是否启用SSL连接，0为关，1为开<BR/>
+>   # 是否启用SSL连接，0为关，1为开<BR/>
 MYSQL_SSL_ENABLE = 0<BR/>
-  # 客户端证书目录，请看   https://github.com/glzjin/shadowsocks/wiki/Mysql-SSL%E9%85%8D%E7%BD%AE<BR/>
+>   # 客户端证书目录，请看   https://github.com/glzjin/shadowsocks/wiki/Mysql-SSL%E9%85%8D%E7%BD%AE<BR/>
  MYSQL_SSL_CERT = '/root/shadowsocks/client-cert.pem'<BR/>
 MYSQL_SSL_KEY = '/root/shadowsocks/client-key.pem'<BR/>
 MYSQL_SSL_CA = '/root/shadowsocks/ca.pem'<BR/>
-  # API，不用管<BR/>
+>   # API，不用管<BR/>
 API_HOST = '127.0.0.1' <BR/>
 API_PORT = 80<BR/>
 API_PATH = '/mu/v2/'<BR/>
 API_TOKEN = 'abcdef'<BR/>
 API_UPDATE_TIME = 60<BR/>
-  # Manager 不用管<BR/>
+>   # Manager 不用管<BR/>
 MANAGE_PASS = 'ss233333333'<BR/>
-  #if you want manage in other server you should set this value to global ip<BR/>
+>   #if you want manage in other server you should set this value to global ip<BR/>
 MANAGE_BIND_IP = '127.0.0.1'<BR/>
-  #make sure this port is idle<BR/>
+>   #make sure this port is idle<BR/>
 MANAGE_PORT = 23333<BR/>
-  #安全设置，限制在线 IP 数所需，下面这个参数随机设置，并且所有节点需要保持一致。<BR/>
+>   #安全设置，限制在线 IP 数所需，下面这个参数随机设置，并且所有节点需要保持一致。<BR/>
   IP_MD5_SALT = 'randomforsafety'<BR/>
   
 运行的话，有几种方式。<BR/>
