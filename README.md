@@ -15,7 +15,7 @@ A fast tunnel proxy that helps you bypass firewalls.
 `yum install -y wget`<BR/>
 `yum install python-setuptools && easy_install pip`<BR/><BR/>
 **4.安装 libsodium _备注：如果不适用chacha20 方式可以省略此步骤**<BR/>
-<BR/>
+
 ```
 yum -y groupinstall "Development Tools"
 wget https://github.com/jedisct1/libsodium/releases/download/1.0.13/libsodium-1.0.13.tar.gz
@@ -24,7 +24,7 @@ tar xf libsodium-1.0.13.tar.gz && cd libsodium-1.0.13
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
 ```
-<BR/>
+
 **下载程序源代码并安装依赖**<BR/>
 ```
 git clone  https://github.com/wggwcn/ssr_manyu.git
