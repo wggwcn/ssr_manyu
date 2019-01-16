@@ -107,8 +107,8 @@ wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/systemd-s
 
 >安装supervisor
 ```
-yum install supervisor python-pip -y<BR/>
-pip install supervisor==3.1<BR/>
+yum install supervisor python-pip -y
+pip install supervisor==3.1
 ```
 编辑 /etc/supervisord.conf 最后一段改成如下的，以 /root/shadowsocks/ 为例<BR/>
 ```
@@ -141,7 +141,12 @@ wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/superviso
 查看supervisord运行情况<BR/>
 `systemctl status systemd-supervisor`<BR/>
 
-
+**安装BBR加速**<BR/>
+```
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+chmod +x bbr.sh
+./bbr.sh
+```
 
 
  
