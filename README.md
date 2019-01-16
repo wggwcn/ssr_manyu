@@ -37,35 +37,15 @@ pip install -r requirements.txt<BR/>
 
 **主要编辑 userapiconfig.py ,来解释下里面各项配置的意思**<BR/>
 
- >  # Config<BR/>
->   #节点ID<BR/>
+Config<BR/>
+节点ID<BR/>
   NODE_ID = 1<BR/>
    #自动化测速，为0不测试，此处以小时为单位，要和 ss-panel               > 设置的小时数一致<BR/>
-  SPEEDTEST = 6<BR/>
-  #云安全，自动上报与下载封禁IP，1为开启，0为关闭<BR/>
-CLOUDSAFE = 1<BR/>
-  #自动封禁SS密码和加密方式错误的 IP，1为开启，0为关闭<BR/>
-  ANTISSATTACK = 0<BR/>
-  #是否接受上级下发的命令，如果你要用这个命令，请参考我之前写的东西，公钥   放在目录下的 ssshell.asc<BR/>
-AUTOEXEC = 1<BR/>
-  多端口单用户设置，看重大更新说明。<BR/>
-  MU_SUFFIX = 'zhaoj.in'<BR/>
-  多端口单用户设置，看重大更新说明。<BR/>
-  MU_REGEX = '%5m%id.%suffix'<BR/>
-  #不明觉厉<BR/>
-  SERVER_PUB_ADDR = '127.0.0.1' # mujson_mgr need this to generate ssr     link<BR/>
-  #访问面板方式<BR/>
-  `API_INTERFACE = 'glzjinmod' #glzjinmod (数据库方式连接)，modwebapi (http api)<BR/>
-  #mudb，不要管<BR/>
-MUDB_FILE = 'mudb.json'<BR/>
->   # HTTP API 的相关信息，看重大更新说明。<BR/>
-  WEBAPI_URL = 'https://zhaoj.in'<BR/>
-  WEBAPI_TOKEN = 'glzjin'<BR/>
->   # Mysql 数据库连接信息<BR/>
-  MYSQL_HOST = '127.0.0.1'<BR/>
-MYSQL_PORT = 3306<BR/>
-MYSQL_USER = 'ss'<BR/>
-MYSQL_PASS = 'ss'<BR/>
+   修改数据库
+  MYSQL_HOST = '127.0.0.1'<BR/>  数据库ip地址 这里直接映射本地
+MYSQL_PORT = 3306<BR/>   端口
+MYSQL_USER = 'ss'<BR/>   数据库名字
+MYSQL_PASS = 'ss'<BR/>    数据库密码
 
   
 运行的话，有几种方式。<BR/>
@@ -84,7 +64,12 @@ wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/sysctl.c
 wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/systemd-supervisor.service -O /usr/lib/systemd/system/systemd-supervisor.service<BR/>
 
 **编辑supervisord配置文件**<BR/>
->编辑 /etc/supervisord.conf 最后一段改成如下的，以 /root/shadowsocks/ 为例<BR/>
+
+>安装supervisor
+yum install supervisor python-pip -y<BR/>
+pip install supervisor==3.1<BR/>
+
+编辑 /etc/supervisord.conf 最后一段改成如下的，以 /root/shadowsocks/ 为例<BR/>
 [program:mu]<BR/>
 command=python /root/shadowsocks/server.py<BR/>
 directory=/root/shadowsocks<BR/>
