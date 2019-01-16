@@ -128,17 +128,17 @@ logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO
 ```
 保存<BR/>
 
-如果想直接下载该文件supervisor的配置文件覆盖<BR/>
+如果想直接下载该文件supervisor的配置文件覆盖
 ```
-wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/supervisord.conf -O  /etc/supervisord.conf<BR/>
+wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/supervisord.conf -O  /etc/supervisord.conf
 ```
 
 **supervisor 启动，停止，自开机命令**<BR/>
 设置开机自启<BR/>
-`systemctl enable systemd-supervisor`<BR/>
-启动supervisord<BR/>
-`systemctl start systemd-supervisor`<BR/>
-查看supervisord运行情况<BR/>
+`systemctl enable systemd-supervisor`
+启动supervisord
+`systemctl start systemd-supervisor`
+查看supervisord运行情况
 `systemctl status systemd-supervisor`
 
 
