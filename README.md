@@ -36,7 +36,7 @@ yum -y install openssl-devel<BR/>
 pip install -r requirements.txt<BR/>
 
 **主要编辑 userapiconfig.py ,来解释下里面各项配置的意思**<BR/>
-
+```
 Config<BR/>
 节点ID<BR/>
   NODE_ID = 1<BR/>
@@ -46,7 +46,7 @@ Config<BR/>
 MYSQL_PORT = 3306<BR/>   端口
 MYSQL_USER = 'ss'<BR/>   数据库名字
 MYSQL_PASS = 'ss'<BR/>    数据库密码
-
+```
   
 运行的话，有几种方式。<BR/>
 
