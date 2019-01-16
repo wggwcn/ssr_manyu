@@ -29,7 +29,7 @@ ldconfig
 **下载程序源代码并安装依赖**<BR/>
 
 git clone  https://github.com/wggwcn/ssr_manyu.git
-cd shadowsocks<BR/>
+cd ssr_manyu<BR/>
 yum -y install python-devel<BR/>
 yum -y install libffi-devel<BR/>
 yum -y install openssl-devel<BR/>
