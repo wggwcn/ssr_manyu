@@ -18,14 +18,14 @@ A fast tunnel proxy that helps you bypass firewalls.
 `yum install -y wget`<BR/>
 `yum install python-setuptools && easy_install pip`<BR/><BR/>
 **4.安装 libsodium _备注：如果不适用chacha20 方式可以省略此步骤**<BR/>
-
+```
 yum -y groupinstall "Development Tools"
 wget https://github.com/jedisct1/libsodium/releases/download/1.0.13/libsodium-1.0.13.tar.gz
 tar xf libsodium-1.0.13.tar.gz && cd libsodium-1.0.13
 ./configure && make -j2 && make install
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
-
+```
 **下载程序源代码并安装依赖**<BR/>
 
 git clone  https://github.com/wggwcn/ssr_manyu.git
@@ -98,11 +98,11 @@ IP_MD5_SALT = 'randomforsafety'
 
 **优化**<BR/>
 ```
-wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/limits.conf -O /etc/security/limits.conf && ulimit -n 51200<BR/>
+wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/limits.conf -O /etc/security/limits.conf && ulimit -n 51200
 
-wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/sysctl.conf -O /etc/sysctl.conf  && sysctl -p<BR/>
+wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/sysctl.conf -O /etc/sysctl.conf  && sysctl -p
 
-wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/systemd-supervisor.service -O /usr/lib/systemd/system/systemd-supervisor.service<BR/>
+wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/systemd-supervisor.service -O /usr/lib/systemd/system/systemd-supervisor.service
 ```
 **编辑supervisord配置文件**<BR/>
 
@@ -113,19 +113,19 @@ pip install supervisor==3.1<BR/>
 ```
 编辑 /etc/supervisord.conf 最后一段改成如下的，以 /root/shadowsocks/ 为例<BR/>
 ```
-[program:mu]<BR/>
-command=python /root/shadowsocks/server.py<BR/>
-directory=/root/shadowsocks<BR/>
-autorestart=true<BR/>
-startsecs=10<BR/>
-startretries=36<BR/>
-redirect_stderr=true<BR/>
-user=root ; setuid to this UNIX account to run the program<BR/>
-log_stdout=true ; if true, log program stdout (default true)<BR/>
+[program:mu]
+command=python /root/ssr_manyu/server.py
+directory=/root/ssr_manyu
+autorestart=true
+startsecs=10
+startretries=36
+redirect_stderr=true
+user=root ; setuid to this UNIX account to run the program
+log_stdout=true ; if true, log program stdout (default true)
 log_stderr=true ; if true, log program stderr (def false)
-logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO<BR/>
-;logfile_maxbytes=1MB ; max # logfile bytes b4 rotation (default 50MB)<BR/>
-;logfile_backups=10 ; # of logfile backups (default 10)<BR/>
+logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO
+;logfile_maxbytes=1MB ; max # logfile bytes b4 rotation (default 50MB)
+;logfile_backups=10 ; # of logfile backups (default 10)
 ```
 保存<BR/>
 
