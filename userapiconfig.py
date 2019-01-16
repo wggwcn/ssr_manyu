@@ -18,10 +18,10 @@ WEBAPI_TOKEN = '' #随意，与config文件一致
 MUDB_FILE = 'mudb.json'
 
 # Mysql 使用modwebapi则无需配置
-MYSQL_HOST = '45.77.124.7'
+MYSQL_HOST = '0.0.0.0'
 MYSQL_PORT = 3306
 MYSQL_USER = 'ss'
-MYSQL_PASS = 'ss123456'
+MYSQL_PASS = 'ss'
 MYSQL_DB = 'ss'
 
 MYSQL_SSL_ENABLE = 0
