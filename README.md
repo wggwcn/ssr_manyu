@@ -86,7 +86,7 @@ logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO<BR/>
 保存<BR/>
 
 如果想直接下载该文件supervisor的配置文件覆盖<BR/>
-wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/supervisord.conf -O -O /etc/supervisord.conf<BR/>
+wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/supervisord.conf -O  /etc/supervisord.conf<BR/>
 
 
 **supervisor 启动，停止，自开机命令**<BR/>
