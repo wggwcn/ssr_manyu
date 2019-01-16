@@ -56,20 +56,22 @@ MYSQL_PASS = 'ss'<BR/>    数据库密码
  - supervisord<BR/>
 
 **优化**<BR/>
-
+```
 wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/limits.conf -O /etc/security/limits.conf && ulimit -n 51200<BR/>
 
 wget  https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/sysctl.conf -O /etc/sysctl.conf  && sysctl -p<BR/>
 
 wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/systemd-supervisor.service -O /usr/lib/systemd/system/systemd-supervisor.service<BR/>
-
+```
 **编辑supervisord配置文件**<BR/>
 
 >安装supervisor
+```
 yum install supervisor python-pip -y<BR/>
 pip install supervisor==3.1<BR/>
-
+```
 编辑 /etc/supervisord.conf 最后一段改成如下的，以 /root/shadowsocks/ 为例<BR/>
+```
 [program:mu]<BR/>
 command=python /root/shadowsocks/server.py<BR/>
 directory=/root/shadowsocks<BR/>
@@ -83,17 +85,21 @@ log_stderr=true ; if true, log program stderr (def false)
 logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO<BR/>
 ;logfile_maxbytes=1MB ; max # logfile bytes b4 rotation (default 50MB)<BR/>
 ;logfile_backups=10 ; # of logfile backups (default 10)<BR/>
+```
 保存<BR/>
 
 如果想直接下载该文件supervisor的配置文件覆盖<BR/>
+```
 wget https://raw.githubusercontent.com/wggwcn/ssr_manyu/master/centos7/supervisord.conf -O  /etc/supervisord.conf<BR/>
-
+```
 
 **supervisor 启动，停止，自开机命令**<BR/>
-
-systemctl enable systemd-supervisor设置开机自启<BR/>
-systemctl start systemd-supervisor启动supervisord<BR/>
-systemctl status systemd-supervisor查看supervisord运行情况<BR/>
+设置开机自启<BR/>
+`systemctl enable systemd-supervisor`
+启动supervisord<BR/>
+`systemctl start systemd-supervisor`
+查看supervisord运行情况<BR/>
+`systemctl status systemd-supervisor`
 
 
 
