@@ -1,0 +1,57 @@
+Загружается https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+Подготовка...               ########################################
+Обновление / установка...
+elrepo-release-7.0-3.el7.elrepo       ########################################
+Загружены модули: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.truenetwork.ru
+ * elrepo: mirrors.nav.ro
+ * elrepo-kernel: mirrors.nav.ro
+ * epel: mirror.linux-ia64.org
+ * extras: ftp.nsc.ru
+ * updates: ftp.nsc.ru
+Not using downloaded elrepo/repomd.xml because it is older than what we have:
+  Current   : Tue Jan 15 13:15:04 2019
+  Downloaded: Sun Jan 13 23:15:07 2019
+Разрешение зависимостей
+--> Проверка сценария
+---> Пакет kernel-ml.x86_64 0:4.20.2-1.el7.elrepo помечен для установки
+---> Пакет kernel-ml-devel.x86_64 0:4.20.2-1.el7.elrepo помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package             Архитектура
+                                Версия                  Репозиторий       Размер
+================================================================================
+Установка:
+ kernel-ml           x86_64     4.20.2-1.el7.elrepo     elrepo-kernel      46 M
+ kernel-ml-devel     x86_64     4.20.2-1.el7.elrepo     elrepo-kernel      12 M
+
+Итого за операцию
+================================================================================
+Установить  2 пакета
+
+Объем загрузки: 58 M
+Объем изменений: 252 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Общий размер                                        12 MB/s |  58 MB  00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : kernel-ml-4.20.2-1.el7.elrepo.x86_64                        1/2 
+  Установка   : kernel-ml-devel-4.20.2-1.el7.elrepo.x86_64                  2/2 
+  Проверка    : kernel-ml-devel-4.20.2-1.el7.elrepo.x86_64                  1/2 
+  Проверка    : kernel-ml-4.20.2-1.el7.elrepo.x86_64                        2/2 
+
+Установлено:
+  kernel-ml.x86_64 0:4.20.2-1.el7.elrepo                                        
+  kernel-ml-devel.x86_64 0:4.20.2-1.el7.elrepo                                  
+
+Выполнено!
+
+[0;32mInfo:[0m The system needs to reboot.
+Do you want to restart system? [y/n]
